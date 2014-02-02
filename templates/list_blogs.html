@@ -3,10 +3,13 @@
         <head>
             <meta charset="utf-8">
             <title>
-                
+                Blog List
             </title>
             </head>
         <body>
-            <p>Hello world</p>
+            <a href="/blog/new_blog">Yeni Blog Ekle</a>
+            {% for blog in blogs %}
+                <p>ID: {{blog.id}} Baslik: {{blog.baslik}}  Icerik:{{blog.icerik}} <a href="/blog/edit_blog/{{blog.id}}">Duzenle</a></p>
+            {% endfor %}
         </body>
     </html>
